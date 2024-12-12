@@ -31,7 +31,7 @@ function createCube() {
 
 // Adicionar 300 cubos à cena
 const cubes = [];
-for (let i = 0; i < 300; i++) {
+for (let i = 0; i < 100; i++) {
   const cube = createCube();
   cube.position.set(
     (Math.random() - 0.5) * 50,  // Posição X
