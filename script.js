@@ -1,3 +1,22 @@
+function detectarScroll(el) {
+  var elements = document.querySelectorAll("."+el);
+  if (elements){
+      elements.forEach(function (element) {
+          var position = element.getBoundingClientRect();
+
+          // Verifica se o elemento está visível no viewport
+          if (position.top < window.innerHeight && position.bottom >= 20) {
+              element.id = el; // Adiciona a classe
+          }
+      });
+
+  }
+}
+window.addEventListener("scroll",function() {
+  detectarScroll("linha")
+});
+
+
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 const renderer = new THREE.WebGLRenderer({ alpha: true });
