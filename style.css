@@ -138,7 +138,23 @@ body{
     font-weight: 600;
     color: var(--tema1);
 }
+@keyframes changeGradientAnimation {
+    0% {
+        background-position: 0%;
+    }
+    
+    50% {
+        background-position: 400%;
+    }
+    100% {
+        background-position: 0%;
+    }
+}
+
 .banner .compose .side a{
+    background: linear-gradient(56deg, var(--tema1), var(--tema1), #ffe28c, var(--tema1), var(--tema1));
+    background-size: 400%;
+    animation: changeGradientAnimation 18s ease-in-out infinite;
     color: white;
     font-size: 1.3vw;
     border-radius: 40px;
@@ -184,6 +200,9 @@ body{
 }
 .banner .compose p strong{
     font-weight: 400;
+}
+.banner .compose p strong i{
+    color: var(--tema1);
 }
 .banner .compose p{
     margin: 0;
@@ -346,7 +365,8 @@ body{
 }
 .banner_data .content .bottom{
     height: 60vh;
-    padding: 30px 70px;
+    padding: 30px 0px;
+    width: 90%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -981,8 +1001,9 @@ body{
     .banner{
         min-height: 100vh;
     }
-    .side:nth-of-type(1) p:nth-of-type(1),    .side:nth-of-type(1) p:nth-of-type(2){
+    .side:nth-of-type(1) p:nth-of-type(1),.side:nth-of-type(1) p:nth-of-type(2){
         font-size: 100%;
+        text-align: center;
     }
     .banner .compose:nth-of-type(2){
         height: auto;
@@ -1009,7 +1030,34 @@ body{
         text-align: center;
         font-size: 100%;
     }
+    .banner_data .descri .side a{
+        width: 100%;
+    }
+    .banner_data .content .bottom .texto{
+        align-items: center;
+    }
+    .texto p{
+        text-align: center;
+    }
+    .ticket{
+        flex-direction: column;
+    }
+    #compra .container{
+        width: 90%;
+    }
+    #compra .container p{
+        font-size: 100%;
+        text-align: center;
+    }
+    #compra .container:nth-of-type(1) p:nth-of-type(1){
+        font-size: 100%;
+    }
+    #compra .container{
+        height: auto;
+    }
     .cta{
+        padding: 10px 0px;
+        width: 100%;
         font-size: 90%;
         font-weight: 700;
     }
@@ -1050,9 +1098,7 @@ body{
     .banner_data .content .bottom .texto a{
         width: 80%;
     }
-    .banner_data .descri .side a{
-        width: 80%;
-    }
+
     .side:nth-of-type(1) p:nth-of-type(1){
         width: 100%;
     }
@@ -1130,5 +1176,7 @@ body{
     .comentarios .comentario p:nth-of-type(1){
         font-size: 150%;
     }
-
+    .banner_data .content .data{
+        transform: none;
+    }
 }

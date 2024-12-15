@@ -286,11 +286,5 @@
     height: 100%;
   }
 
-  .flipdown .rotor-leaf-front,
-  .flipdown .rotor-leaf-rear,
-  .flipdown .rotor-top,
-  .flipdown .rotor-bottom,
-  .flipdown .rotor:after {
-    height: 50%;
-  }
+
 }
