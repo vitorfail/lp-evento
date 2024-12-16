@@ -966,38 +966,61 @@ body{
 .faq .center{
     flex-direction: column;
 }
-.faq .container .line:nth-of-type(1) span::before{
+.faq .container span::before{
     color: var(--tema1);
     content: "+";
     display: flex;
     align-items: center;
-    font-size: 100%;
+    font-size: xx-large;
     font-weight: 600;
 }
 .faq .container .line:nth-of-type(1) span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 40px;
     aspect-ratio: 1/1;
     font-size: -webkit-xxx-large;
 }
-
-.faq .container .line:nth-of-type(1) p{
+.faq .container .line button{
+    text-align: left;
     font-weight: 600;
-    font-size: 40px;
+    font-size: 25px;
     color: var(--tema1);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background: none;
+    outline: none;
+    border: none;
+}
+.line button:focus-within>span::before{
+    content: "-";
+    transition: all 0.3s;
+    transform: rotateZ(180deg);
+}
+.line button:focus-within~ p{
+    height: auto;
+}
+.faq .container p{
+    height: 0px;
 }
 .faq .container .line:nth-of-type(2){
     overflow: hidden;
     height: 0px;
 }
 .faq .container .line{
+    overflow: hidden;
+    height: auto;
     width: 100%;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 .faq .container{
     padding: 10px 0px;
-    border-bottom: 2px solid white;
+    border-bottom: 2px solid var(--tema1);
     width: 100%;
     display: flex;
     align-items: center;
@@ -1036,6 +1059,9 @@ body{
     }
 }
 @media screen and (max-width:650px) {
+    .faq .container .line button{
+        font-size: 100%;
+    }
     .banner .compose:nth-child(2){
         flex-direction: column;
     }
