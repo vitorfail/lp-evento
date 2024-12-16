@@ -959,6 +959,51 @@ body{
     width: 100%;
     height: auto;
 }
+.faq{
+    margin: 40px 0px;
+    width: 100%;
+}
+.faq .center{
+    flex-direction: column;
+}
+.faq .container .line:nth-of-type(1) span::before{
+    color: var(--tema1);
+    content: "+";
+    display: flex;
+    align-items: center;
+    font-size: 100%;
+    font-weight: 600;
+}
+.faq .container .line:nth-of-type(1) span{
+    width: 40px;
+    aspect-ratio: 1/1;
+    font-size: -webkit-xxx-large;
+}
+
+.faq .container .line:nth-of-type(1) p{
+    font-weight: 600;
+    font-size: 40px;
+    color: var(--tema1);
+}
+.faq .container .line:nth-of-type(2){
+    overflow: hidden;
+    height: 0px;
+}
+.faq .container .line{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.faq .container{
+    padding: 10px 0px;
+    border-bottom: 2px solid white;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
 @media screen and (min-width:1900px) {
     .banner .compose:nth-of-type(2){
         height: 60%;
