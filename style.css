@@ -372,7 +372,7 @@ body{
     justify-content: space-between;
     align-items: center;
 }
-.banner_data .content .bottom iframe{
+.banner_data .content .bottom img{
     width: 47%;
 }
 .banner_data .content .bottom .texto{
@@ -960,11 +960,37 @@ body{
     height: auto;
 }
 .faq{
+    background: rgb(23, 23, 23);
+    border: rgba(255, 255, 0, 0.289) 1px solid;
     margin: 40px 0px;
     width: 100%;
 }
+.faq .baixo{
+    display: flex;
+    width: 100%;
+}
+
+.faq .inicial{
+    width: 100%;
+    text-align: center;
+    font-family: "Limelight", sans-serif;
+    font-size: 40px;
+    color: var(--tema1);
+    text-align: center;
+    width: 100%;
+}
+.faq .line-side{
+    padding-left: 20px;
+    width: 50%;
+}
+.faq .centrer{
+    justify-content: center;
+    display: flex;
+    width: 50%;
+}
 .faq .center{
     flex-direction: column;
+    padding: 20px 0px;
 }
 .faq .container span::before{
     color: var(--tema1);
@@ -985,7 +1011,7 @@ body{
 .faq .container .line button{
     text-align: left;
     font-weight: 600;
-    font-size: 25px;
+    font-size: 20px;
     color: var(--tema1);
     width: 100%;
     display: flex;
@@ -1020,13 +1046,480 @@ body{
 }
 .faq .container{
     padding: 10px 0px;
-    border-bottom: 2px solid var(--tema1);
+    border-bottom: 1px solid var(--tema1);
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
+.chekout{
+    min-height: 100vh;
+}
+.chekout p{
+    color: #2E2205;
+}
+.chekout .center{
+    height: 90%;
+    align-items: center;
+}
+.chekout .precos{
+    border-radius: 20px;
+    height: 100%;
+    position: relative;
+    background: var(--tema1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+}
+
+.chekout .precos .imersao{
+    width: 150px;
+    text-align: center;
+    font-family: "Limelight", sans-serif;
+    font-size: 30px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.chekout .precos .preco-antigo{
+    font-size: 25px;
+    position: relative;
+}
+.chekout .precos .preco-atual{
+    font-size: 70px;
+    font-weight: 600;
+    position: relative;
+}
+.chekout .precos .preco-atual::after{
+    position: absolute;
+    width: auto;
+    content: "R$";
+    font-size: 20px;
+    top: 0;
+    left: -22%;
+    color: white;
+}
+.chekout .precos .traco{
+    opacity: 0.3;
+    width: 85%;
+    height: 1px;
+    border-bottom: 2px dashed #2E2205;
+}
+.chekout .precos .preco-atual::before{
+    font-size: 20px;
+    position: absolute;
+    width: auto;
+    content: ",98";
+    bottom: 0;
+    right: -22%;
+    color: white;
+}
+.chekout .precos a{
+    margin: 10px 0px;
+    cursor: pointer;
+    text-decoration: none;
+    background: linear-gradient(56deg, #957a3d, #957a3d, #f9cf6c, #957a3d, #957a3d);
+    background-size: 400%;
+    animation: changeGradientAnimation2 18s ease-in-out infinite;
+    color: white;
+    font-weight: 500;
+    padding: 20px;
+    border-radius: 30px;
+    border-bottom: 5px solid #2E2205;
+}
+.chekout .precos a:hover{
+    scale: 1.1;
+}
+@keyframes changeGradientAnimation2 {
+    0% {
+        background-position: 0%;
+    }
+    
+    50% {
+        background-position: 400%;
+    }
+    100% {
+        background-position: 0%;
+    }
+}
+.chekout .precos .preco-antigo::after{
+    content: "";
+    display: flex;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 2px;
+    background: red;
+}
+.chekout .precos .oferta{
+    text-align: center;
+    font-weight: 800;
+    font-size: 35px;
+}
+.chekout .precos::after{
+    pointer-events: none;
+        background-image: url(data:image/png;base64,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);
+background-blend-mode: multiply;
+z-index: 1;
+    display: flex;
+    content: "";
+    position: absolute;
+    opacity: 0.6;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.chekout .precos::before{
+    pointer-events: none;
+
+    background: linear-gradient(-250deg, transparent 15%, rgba(248, 255, 151, 0.7) 30%, transparent 40%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.4) 60%, rgba(0, 0, 0, 0.4) 60%, rgba(0, 0, 0, 0.3) 70%, transparent 80%);
+z-index: 2;
+  display: flex;
+  content: "";
+  position: absolute;
+  opacity: 0.1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.chekout .precos .logos img{
+    opacity: 0.8;
+    height: 20px;
+    width: auto;
+}
+.chekout .indic p:nth-of-type(1){
+    font-family: "Limelight", sans-serif;    
+    font-size: 30px;
+}
+.chekout .indic p:nth-of-type(2){
+    font-weight: 400;
+}
+
+.chekout .indic{
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    height: 20%;
+    padding: 4%;
+    width: 50%;
+    flex-direction: column;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    /* height: auto; */
+    background: rgb(251 168 0);
+    position: relative;}
+.chekout .indic p,.chekout .indic i::before{
+    color: #2E2205;
+
+}
+.chekout .indic i::before{
+    font-size: 40px;
+}
+.chekout .indic ::after{
+    background: linear-gradient(-250deg, transparent 15%, rgba(248, 255, 151, 0.7) 30%, transparent 40%, rgba(0, 0, 0, 0.3) 50%, rgba(0, 0, 0, 0.4) 60%, rgba(0, 0, 0, 0.4) 60%, rgba(0, 0, 0, 0.3) 70%, transparent 80%);
+    display: flex;
+    content: "";
+    position: absolute;
+    opacity: 0.1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+/*iniciando computador*/
+.centrer {
+      margin: auto;
+      top: 0; left: 0; bottom: 0; right: 0;  
+    width: 606px;
+    height: 200px;
+  }
+  .galeria .center{
+    display: flex;
+    align-items: flex-start;
+    justify-content:center;
+    flex-direction: column;
+
+}
+  @layer base, components;
+
+  @supports (view-timeline: --works) {
+      /* Hide warning when native view-timeline support detected */
+      .warning {
+          display: none;
+      }
+  
+      /* Animation bumps up the z-index, to make sure it’s on top */
+      @keyframes adjust-z-index {
+          0% {
+              z-index: 1;
+          }
+          50% {
+              z-index: 100; /* When at the center, be on top */
+          }
+          100% {
+              z-index: 1;
+          }
+      }
+  
+      /* Animation that rotates the cover */
+      @keyframes rotate-cover {
+          0% {
+              transform: translateX(-100%) rotateY(-45deg);
+          }
+          35% {
+              transform: translateX(0) rotateY(-45deg);
+          }
+          50% {
+              transform: rotateY(0deg) translateZ(1em) scale(1.5);
+          }
+          65% {
+              transform: translateX(0) rotateY(45deg);
+          }
+          100% {
+              transform: translateX(100%) rotateY(45deg);
+          }
+      }
+  
+      .cards li {	
+          /* Track this element as it intersects the scrollport */
+          view-timeline-name: --li-in-and-out-of-view;
+          view-timeline-axis: inline;
+  
+          /* Link an animation to the established view-timeline and have it run during the contain phase */
+          animation: linear adjust-z-index both;
+          animation-duration: auto;
+          animation-timeline: --li-in-and-out-of-view;
+          animation-range: contain 0% contain 100%; /* For Canary */
+  
+          /* Make the 3D stuff work… */
+          perspective: 40em;
+  
+          position: relative;
+          z-index: 1;
+          will-change: z-index;
+  
+          user-select: none;
+      }
+  
+      .cards li > img {
+          /* Link an animation to the established view-timeline (of the parent li) and have it run during the contain phase */
+          animation: linear rotate-cover both;
+          animation-duration: auto;
+          animation-timeline: --li-in-and-out-of-view;
+          animation-range: contain 0% contain 100%;
+  
+          /* Prevent FOUC */
+          transform: translateX(-100%) rotateY(-45deg);
+  
+          will-change: transform;
+      }
+  }
+  
+  @layer base {
+      * {
+          box-sizing: border-box;
+          padding: 0;
+          margin: 0;
+      }
+  
+      :root {
+          --cover-size: 15rem;
+      }
+  
+      @media (max-width: 800px) {
+          :root {
+              --cover-size: 9rem;
+          }
+      }
+  
+      @media (max-width: 500px) {
+          :root {
+              --cover-size: 6rem;
+          }
+      }
+      
+
+  
+      body {
+          font-family: sans-serif;
+  
+          display: flex;
+          flex-direction: column;
+          gap: 1em;
+          padding: 1em;
+      }
+      
+      @supports (place-content: safe center) {
+          body {
+              place-content: safe center;
+          }
+      }
+      
+      a { 
+          color: papayawhip;
+      }
+      
+      footer {
+          font-style: italic;
+          margin-top: 1em;
+      }
+  
+      .cards {
+        display: flex;
+        align-items: center;
+          list-style: none;
+          overflow-x: scroll;
+          width: 100%;
+          white-space: nowrap;
+  
+      }
+      
+      .cards:focus {
+          outline-color: #666;
+      }
+      
+      /* only enable snapping when not dragging round*/
+      .cards:not(.active) {
+          scroll-snap-type: x mandatory;
+      }
+  
+      .cards li {
+          display: inline-block;
+          width: var(--cover-size);
+          height: var(--cover-size);
+          scroll-snap-align: center;
+      }
+  
+      .cards li img {
+          dislay: block;
+          width: var(--cover-size);
+          height: var(--cover-size);
+  
+          -webkit-box-reflect: below 0.5em
+              linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.25));
+      }
+  
+      .cards {
+          min-height: calc(var(--cover-size) * 2.5);
+  
+          max-width: calc(var(--cover-size) * 6);
+          margin: 0 auto;
+            padding: calc(var(--cover-size) / 3 * 2) 0;
+      }
+      
+      .cards li:first-of-type {
+          margin-left: calc(50% - var(--cover-size) / 2);
+      }
+      .cards li:last-of-type {
+          margin-right: calc(50% - var(--cover-size) / 2);
+      }
+  }
+  .cards::-webkit-scrollbar {
+    width: 12px; /* Largura do scrollbar */
+    height: 12px; /* Altura do scrollbar (caso tenha rolagem horizontal) */
+  }
+  
+  /* Parte branca (trilha do scrollbar) */
+  .cards::-webkit-scrollbar-track {
+    background-color: rgba(255, 255, 255, 0); /* Cor branca com transparência */
+    border-radius: 10px;
+  }
+  
+  /* Parte cinza (thumb do scrollbar) */
+  .cards::-webkit-scrollbar-thumb {
+    background-color: #ff7f32; /* Cor laranja */
+    border-radius: 10px;
+  }
+  
+  /* Efeito quando o thumb (parte cinza) é sobrevoado */
+  .cards::-webkit-scrollbar-thumb:hover {
+    background-color: #ff5722; /* Cor laranja mais escura no hover */
+  }
+  @layer components {
+      @layer warning {
+          /* Show warning for browsers without support */
+          .warning {
+              padding: 1em;
+              border: 1px solid black;
+              z-index: 9999;
+              color: black;
+              background: rgba(255 255 225 / 0.9);
+              z-index: 10001;
+              
+              width: max-content;
+              margin: 0 auto;
+          }
+          
+          :is(
+              .warning:hover,
+              .warning:has(:focus-within)
+          ) {
+              opacity: 1;
+          }
+  
+          .warning > :first-child {
+              margin-top: 0;
+          }
+  
+          .warning > :last-child {
+              margin-bottom: 0;
+          }
+  
+          .warning a {
+              color: blue;
+          }
+  
+          .warning--info {
+              border: 1px solid #123456;
+              background: rgba(205 230 255 / 0.8);
+          }
+      }
+      
+      @layer debug {
+          #debug {
+              position: absolute;
+              top: 1em;
+              left: 1em;
+          }
+          #debug::after {
+              content: " Show Debug";
+              margin-left: 1.5em;
+              color: white;
+              white-space: nowrap;
+          }
+  
+          #debug:checked + .cards {
+              border: 1px solid lime;
+          }
+  
+          #debug:checked + .cards li {
+              text-align: center;
+              color: white;
+              border: 1px solid blue;
+          }
+  
+          #debug:checked + .cards li::before {
+              content: attr(id);
+              display: block;
+              position: absolute;
+              inset: 0;
+              line-height: var(--cover-size);
+              opacity: 0.5;
+          }
+  
+          #debug:checked + .cards li img {
+              opacity: 0.5;
+          }
+      }
+  }
+
 @media screen and (min-width:1900px) {
     .banner .compose:nth-of-type(2){
         height: 60%;
