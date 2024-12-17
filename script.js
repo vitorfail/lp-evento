@@ -101,3 +101,53 @@ window.addEventListener('resize', () => {
 
 // Iniciar a animação
 animate();
+
+
+const slider = document.querySelector(".cards");
+
+// Adiciona o evento de scroll (wheel)
+slider.addEventListener("wheel", (e) => {
+    // Previne o comportamento padrão (como rolar a página)
+    e.preventDefault();
+
+    // Calcula o quanto o slider deve mover com base no scroll
+    const scrollAmount = e.deltaY; // deltaY é o valor do movimento do mouse (positivo para baixo, negativo para cima)
+    
+    // Ajusta o scroll do slider de acordo com o valor do scroll
+    slider.scrollLeft += scrollAmount;
+});
+
+slider.addEventListener("mousedown", (e) => {
+  // Verifica se o botão pressionado é o do meio (scroll)
+  if (e.button === 1) {
+      isDown = true;
+      slider.classList.add("active");
+      startX = e.pageX - slider.offsetLeft;
+      scrollLeft = slider.scrollLeft;
+
+      // Evita o comportamento padrão do navegador ao pressionar o botão de scroll (como o "auto-scroll")
+      e.preventDefault();
+  }
+});
+
+// Quando o botão do scroll é solto
+slider.addEventListener("mouseup", () => {
+  isDown = false;
+  slider.classList.remove("active");
+});
+
+// Quando o cursor sai da área do slider
+slider.addEventListener("mouseleave", () => {
+  isDown = false;
+  slider.classList.remove("active");
+});
+
+// Movimento do slider enquanto o botão de scroll está pressionado
+slider.addEventListener("mousemove", (e) => {
+  if (!isDown) return;
+  e.preventDefault();
+
+  const x = e.pageX - slider.offsetLeft;
+  const walk = (x - startX) * 3; // A velocidade do scroll horizontal
+  slider.scrollLeft = scrollLeft - walk;
+});
