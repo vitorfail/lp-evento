@@ -167,6 +167,7 @@
                             <p>FALTAM APENAS:</p>
                         </div>
                         <div class="flipdown" id="flipdown"></div>
+
                     </div>
                     <div class="bottom">
                         <img src="fundo1.jpg"/>
@@ -319,13 +320,11 @@
         </section>
         <section class="galeria">
             <div class="center">
-                <p>Nosso último evento</p>
-                <p>Na SECAPE tivemos nosso primeiro evento presencial</p>
-                <input type="checkbox" id="debug" />
-                
-                <ul class="cards" tabindex="0">
+                <p class="titulo">Veja os insights do nosso<strong> Primeiro Evento</strong></p>
+                <p class="descri">Na Cecape em no dia 01/12/2024 tivemos nosso primeiro evento presencial que contou com a aparticipação de vários alunos. Essa imersão foi uma masterclass de tráfego pago direcionado a delivery.</p>                
+                <ul id="cards" class="cards" tabindex="0">
                     <li>
-                        <img draggable="false" src="slide1.JPG" width="1200" height="1200" />
+                        <img draggable="false" src="slide1.jpeg" width="1200" height="1200" />
                     </li>
                     <li>
                         <img draggable="false" src="slide2.jpeg" width="1200" height="1200" />
@@ -349,54 +348,41 @@
                         <img draggable="false" src="slide8.jpeg" width="1200" height="1200" />
                     </li>
                     <li>
-                        <img draggable="false" src="https://assets.codepen.io/89905/coverflow--Alpine-Koresma-x-Aroth-Artwork-550x550.jpg" width="1200" height="1200" />
+                        <img draggable="false" src="slide9.jpeg" width="1200" height="1200" />
                     </li>
                     <li>
-                        <img draggable="false" src="https://assets.codepen.io/89905/coverflow--Out-Of-the-Dark-Cover-550x550.jpg" width="1200" height="1200" />
+                        <img draggable="false" src="slide10.jpeg" width="1200" height="1200" />
                     </li>
                     <li>
-                        <img draggable="false" src="https://assets.codepen.io/89905/coverflow--2020-06-07-Marley-Carroll-Single-Blue-550x550.jpg" width="1200" height="1200" />
+                        <img draggable="false" src="slide11.jpeg" width="1200" height="1200" />
                     </li>
                     <li>
-                        <img draggable="false" src="https://assets.codepen.io/89905/coverflow--Deep-Dive-EP-Cover-550x550.jpg" width="1200" height="1200" />
+                        <img draggable="false" src="slide12.jpeg" width="1200" height="1200" />
                     </li>
                     <li>
-                        <img draggable="false" src="https://assets.codepen.io/89905/coverflow--Blackrose-Cover-550x550.jpg" width="1200" height="1200" />
+                        <img draggable="false" src="slide13.jpeg" width="1200" height="1200" />
                     </li>
                     <li>
-                        <img draggable="false" src="https://assets.codepen.io/89905/coverflow--FW-Imagine-Gold-Remixes2-550x550.jpg" width="1200" height="1200" />
+                        <img draggable="false" src="slide14.jpeg" width="1200" height="1200" />
                     </li>
                     <li>
-                        <img draggable="false" src="https://assets.codepen.io/89905/coverflow--We-Are-COVER-MAIN-550x550.jpg" width="1200" height="1200" />
+                        <img draggable="false" src="slide15.jpeg" width="1200" height="1200" />
                     </li>
                     <li>
-                        <img draggable="false" src="https://assets.codepen.io/89905/coverflow--Bath-House-Flat-550x550.jpg" width="1200" height="1200" />
+                        <img draggable="false" src="slide16.jpeg" width="1200" height="1200" />
                     </li>
                     <li>
-                        <img draggable="false" src="https://assets.codepen.io/89905/coverflow--Pronoia-JPG-550x550.jpg" width="1200" height="1200" />
+                        <img draggable="false" src="slide17.jpeg" width="1200" height="1200" />
                     </li>
                     <li>
-                        <img draggable="false" src="https://assets.codepen.io/89905/coverflow--Lapa9Theory-Cracking-Stores-no-Loci-logo-550x550.jpg" width="1200" height="1200" />
+                        <img draggable="false" src="slide18.jpeg" width="1200" height="1200" />
                     </li>
-                    <li>
-                        <img draggable="false" src="https://assets.codepen.io/89905/coverflow--EMANCIPATOR_MOM_AlbumCover-2000px-550x550.jpg" width="1200" height="1200" />
-                    </li>
-                    <li>
-                        <img draggable="false" src="https://assets.codepen.io/89905/coverflow--MURGE-ep-cvr-3000x3000-550x550.jpg" width="1200" height="1200" />
-                    </li>
-                    <li>
-                        <img draggable="false" src="https://assets.codepen.io/89905/coverflow--Emancipator_Laybrinth-ART-01-4000x4000-at-300dpi-550x550.jpg" width="1200" height="1200" />
-                    </li>
-                    <li>
-                        <img draggable="false" src="https://assets.codepen.io/89905/coverflow--cover-550x550.jpg" width="1200" height="1200" />
-                    </li>
-                </ul>
-            
+                </ul>            
             </div>
         </section>
         <section class="faq">
             <div class="center">
-                <p class="inicial">FAQ</p>
+                <p class="inicial">Perguntas Frequentes</p>
                 <div class="baixo">
                     <div class="line-side">
                         <div class="container">
@@ -441,14 +427,14 @@
                         </div>
                     </div>
                     <div class="centrer">
-                        <img src="faq.png"/>
+                        <canvas id="scene"></canvas>
                     </div>
     
                 </div>
             </div>
         </section>
 
-        <section id="compra">
+       <!-- <section id="compra">
             <div class="ticket">
                 <div class="container">
                     <p>VALOR DO INVESTIMENTO SOMENTE PARA A PRIMEIRA TURMA</p>
@@ -461,7 +447,7 @@
                     <a href="#">Comprar<i class="fa-solid fa-cart-shopping"></i></a>    
                 </div>
             </div>    
-        </section>
+        </section>-->
         <section class="chekout">
             <div class="center">
                 <div class="precos">
@@ -479,6 +465,7 @@
                         <img alt="Mastercard" src="m.png"/>
                         <img alt="Hipercard" src="hiper.png"/>
                     </div>
+                    <div class="flipdown" id="flipdown"></div>
                 </div>
                 <div class="indic">
                     <i class="fa-solid fa-shield"></i>                    
