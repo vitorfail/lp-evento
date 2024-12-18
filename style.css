@@ -1102,7 +1102,6 @@ body{
     text-align: center;
     font-family: "Limelight", sans-serif;
     font-size: 30px;
-    color: white;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1187,6 +1186,7 @@ body{
     background: red;
 }
 .chekout .precos .oferta{
+    font-family: "Limelight", sans-serif;
     text-align: center;
     font-weight: 800;
     font-size: 35px;
@@ -1213,7 +1213,7 @@ z-index: 2;
   display: flex;
   content: "";
   position: absolute;
-  opacity: 0.1;
+  opacity: 0.5;
   width: 100%;
   height: 100%;
   top: 0;
@@ -2104,6 +2104,15 @@ z-index: 2;
     }
 }
 @media screen and (max-width:650px) {
+    .chekout .precos a{
+        padding: 10px 0px;
+    }
+    .chekout .precos .oferta, .chekout .precos .imersao{
+        font-size: 100%;
+    }
+    .chamada .content{
+        width: 100%;
+    }
     .faq .inicial{
         font-size: 170%;
     }
