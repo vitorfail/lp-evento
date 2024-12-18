@@ -104,6 +104,7 @@ animate();
 
 
 const slider = document.getElementById("cards");
+// Seleciona o elemento de rolagem horizontal (com id "cards")
 
 // Adiciona o evento de scroll (wheel)
 var canvas = document.querySelector("#scene"),
@@ -113,7 +114,7 @@ var canvas = document.querySelector("#scene"),
   mouse = {x:0,y:0},
   radius = 1;
 
-var colors = ["#468966","#FFF0A5", "#FFB03B","#B64926", "#8E2800"];
+var colors = ["#898346","#FFF0A5", "#FFB03B","#B64926", "#8E2800"];
 
 
 
@@ -191,17 +192,17 @@ function initScene(){
 
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-  ctx.font = "bold "+(ww/10)+"px sans-serif";
+  ctx.font = "900 "+(ww/7)+"px sans-serif";
   ctx.textAlign = "center";
-  ctx.fillText("FAQ", ww/2, wh/2);
+  ctx.fillText("?", ww/2, wh/2);
 
   var data  = ctx.getImageData(0, 0, ww, wh).data;
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   ctx.globalCompositeOperation = "screen";
 
   particles = [];
-  for(var i=0;i<ww;i+=Math.round(ww/150)){
-    for(var j=0;j<wh;j+=Math.round(ww/150)){
+  for(var i=0;i<ww;i+=Math.round(ww/170)){
+    for(var j=0;j<wh;j+=Math.round(ww/170)){
       if(data[ ((i + j*ww)*4) + 3] > 150){
         particles.push(new Particle(i,j));
       }
